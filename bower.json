@@ -1,0 +1,22 @@
+{
+  "name": "books",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Maxime PETIT"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "devDependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angular-mocks": "^1.5.8",
+    "angular-translate": "^2.13.1",
+    "angular-translate-loader-partial": "^2.13.1"
+  }
+}

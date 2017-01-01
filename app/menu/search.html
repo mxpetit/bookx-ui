@@ -1,0 +1,6 @@
+<div ng-controller="SearchController as search">
+	<form ng-submit="search.search(search.keyword)">
+		<input type="search" ng-model="search.keyword">
+		<input type="submit" value="{{'SEARCH' | translate}}">
+	</form>
+</div>

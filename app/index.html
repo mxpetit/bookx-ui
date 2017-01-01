@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="bookx">
+	<head>
+		<title>Book-X</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<script src="lib/angular/angular.js" type="text/javascript"></script>
+		<script src="lib/angular-route/angular-route.min.js" type="text/javascript"></script>
+		<script src="lib/angular-translate/angular-translate.min.js" type="text/javascript"></script>
+		<script src="lib/angular-translate-loader-partial/angular-translate-loader-partial.min.js" type="text/javascript"></script>
+		<script src="javascript/app.min.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<ng-include src="'./html/menu.html'"></ng-include>
+		<ng-view></ng-view>
+	</body>
+</html>
