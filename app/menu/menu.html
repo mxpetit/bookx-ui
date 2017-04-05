@@ -1,5 +1,20 @@
-<link rel="stylesheet" type="text/css" href="css/menu.css">
-<div id="menu">
-	<div ng-include src="'html/search.html'"></div>
-	<div id="menu-language" ng-include src="'html/language.html'"></div>
-</div>
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="/#!/">BookX-UI</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
+			<ng-include src="'html/search.html'"></ng-include>
+			<ng-include src="'html/menu-items.html'"></ng-include>
+		</div>
+	</div>
+</nav>

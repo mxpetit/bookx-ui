@@ -1,9 +1,0 @@
-<link rel="stylesheet" type="text/css" href="css/language.css">
-<nav ng-controller="LanguageController as language" ng-click="language.diplayLanguages()">
-	<p>{{'LANGUAGES' | translate | uppercase}}</p>
-	<ul ng-show="language.showLanguages">
-		<li ng-repeat="lang in language.availableLanguage">
-			<p ng-click="language.changeLanguage(lang)">{{lang | uppercase}}</p>
-		</li>
-	</ul>
-</nav>

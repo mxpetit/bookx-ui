@@ -2,7 +2,14 @@
 	'use strict';
 
 	angular
-		.module('bookx', ['ngRoute', 'translate', 'book', 'home', 'menu'])
+		.module('bookx', [
+			'ngRoute',
+			'translate',
+			'book',
+			'home',
+			'menu',
+			'authentification'
+		])
 		.config(configure);
 
 	configure.$inject = ['$locationProvider', '$routeProvider'];
@@ -12,7 +19,7 @@
 
 		$routeProvider.
 			when('/404', {
-				template: '<p>404</p>'
+				template: '<h1>404</h1>'
 			}).
 			otherwise({
 				redirectTo: '/404'

@@ -5,15 +5,16 @@
 		.module('menu')
 		.controller('SearchController', SearchController);
 
-	SearchController.$inject = ['$log'];
+	SearchController.$inject = ['$location'];
 
-	function SearchController($log) {
+	function SearchController($location) {
 		var vm = this;
 		vm.search = search;
 		vm.keyword = '';
 
 		function search(keyword) {
-			$log.log('Searched ' + keyword	);
+			$location.path('search');
+			$location.search('q', keyword);
 		}
 	}
 })();

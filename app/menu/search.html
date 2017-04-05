@@ -1,6 +1,10 @@
-<div ng-controller="SearchController as search">
-	<form ng-submit="search.search(search.keyword)">
-		<input type="search" ng-model="search.keyword">
-		<input type="submit" value="{{'SEARCH' | translate}}">
+<ng-controller ng-controller="SearchController as searchCtrl">
+	<form class="navbar-form navbar-left" role="search" ng-submit="searchCtrl.search(searchCtrl.keyword)">
+		<div class="input-group">
+			<input type="text" class="form-control" placeholder="{{'SEARCH' | translate}}" ng-model="searchCtrl.keyword">
+			<span class="input-group-btn">
+				<button class="btn btn-default" type="submit">{{'SUBMIT' | translate}}</button>
+			</span>
+		</div>
 	</form>
-</div>
+</ng-controller>

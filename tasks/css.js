@@ -1,7 +1,8 @@
 var gulp = require('gulp'),
 	del = require('del'),
 	sass = require('gulp-sass'),
-	clean = require('gulp-clean-css');
+	clean = require('gulp-clean-css'),
+	concatCss = require('gulp-concat-css');
 
 module.exports = {
 	clean: function() {
@@ -11,6 +12,7 @@ module.exports = {
 	build: function() {
 		return gulp.src('./assets/style/*.scss')
 			.pipe(sass().on('error', sass.logError))
+			.pipe(concatCss('app.min.css'))
 			.pipe(clean())
 			.pipe(gulp.dest('./dist/css/'));
 	},

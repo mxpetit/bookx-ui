@@ -1,0 +1,45 @@
+$bgDefault: #f9ecf2;
+
+#authentification-container {
+	border: 0.5px solid black;
+	max-width: 630px;
+	margin: 0 auto;
+	text-align: center;
+
+	li {
+		background-color: $bgDefault;
+		margin-left: 0px;
+		color: #fff;
+
+		.active {
+			background-color: #009999;
+		}
+
+		a {
+			margin-bottom: 0px;
+			border-radius: 0px;
+		}
+	}
+
+	#authentification-content {
+		padding: 20px 0px 20px 0px;
+		background-color: $bgDefault;
+		border-top: 0.5px solid black;
+
+		div {
+			margin: 0 auto;
+
+			span {
+				top: 0px;
+			}
+
+			button {
+				margin: 10px 0px 0px 0px;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+
+}

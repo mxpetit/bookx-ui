@@ -26,14 +26,13 @@ gulp.task('build:js', js.build);
 gulp.task('watch:js', js.watch);
 
 gulp.task('clean:lib', lib.clean);
-gulp.task('build:lib', lib.build);
 
 gulp.task('css', ['clean:css', 'build:css']);
 gulp.task('html', ['clean:html', 'index:html', 'build:html']);
 gulp.task('images', ['clean:images', 'build:images']);
 gulp.task('js', ['clean:js', 'index:js', 'build:js']);
-gulp.task('lib', ['clean:lib', 'build:lib']);
+gulp.task('lib', ['clean:lib'], lib.build);
 
 gulp.task('watch', ['default', 'watch:css', 'watch:html', 'watch:js']);
 
-gulp.task('default', ['css', 'html', 'images', 'js']);
+gulp.task('default', ['lib', 'css', 'html', 'images', 'js']);
