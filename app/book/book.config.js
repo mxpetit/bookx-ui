@@ -2,17 +2,17 @@
 	'use strict';
 
 	angular
-		.module('book', [])
+		.module('book')
 		.config(configure);
 
 	configure.$inject = ['$routeProvider'];
 
 	function configure($routeProvider) {
 		$routeProvider
-			.when('/book', {
-				templateUrl: 'html/book.html',
-				controller: 'BookController',
-				controllerAs: 'book'
+			.when('/book/:id', {
+				templateUrl: 'html/book-details.html',
+				controller: 'BookDetailsController',
+				controllerAs: 'vm'
 			});
 	}
 })();

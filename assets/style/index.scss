@@ -1,8 +1,15 @@
+@import 'color';
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
 body {
-	background-color: #e6e6ff;
-	margin: 0px;
+	background-color: $bodyColor;
+	margin: 0 0 3.750em 0;
 
 	.jumbotron {
-		background-color: #ffffcc;
+		background-color: $jumbotronColor;
 	}
 }

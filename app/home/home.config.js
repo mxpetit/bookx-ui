@@ -12,7 +12,7 @@
 			.when('/', {
 				templateUrl: 'html/home.html',
 				controller: 'HomeController',
-				controllerAs: 'home'
+				controllerAs: 'vm'
 			});
 	}
 })();

@@ -1,1 +1,52 @@
-<h1>Home</h1>
+<div class="home">
+	<div id="home__carousel" class="carousel slide">
+		<ol class="carousel-indicators">
+			<li data-target="#home__carousel" data-slide-to="0" class="active"></li>
+			<li data-target="#home__carousel" data-slide-to="1"></li>
+			<li data-target="#home__carousel" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="http://placehold.it/1920x400" class="img-responsive">
+				<div class="carousel-caption">
+					<h3>{{'MANAGE' | translate}}</h3>
+					<p>Manage caption</p>
+				</div>
+			</div>
+			<div class="item">
+				<img src="http://placehold.it/1920x400" class="img-responsive">
+				<div class="carousel-caption">
+					<h3>{{'DISCOVER' | translate}}</h3>
+					<p>Discover caption</p>
+				</div>
+			</div>
+			<div class="item">
+				<img src="http://placehold.it/1920x400" class="img-responsive">
+				<div class="carousel-caption">
+					<h3>{{'SHARE' | translate}}</h3>
+					<p>Share caption</p>
+				</div>
+			</div>
+		</div>
+		<span class="left carousel-control" data-target="#home__carousel" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</span>
+		<span class="right carousel-control" data-target="#home__carousel" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</span>
+	</div>
+
+	<div class="book-feed" ng-if="vm.display">
+		<h1 class="book-feed__title">
+			<a href="/#!/store">
+				{{'TO_DISCOVER' | translate}}
+				<span class="glyphicon glyphicon-share-alt"></span>
+			</a>
+		</h1>
+		<div class="book-feed__content">
+			<div ng-repeat="book in vm.books" class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+				<book-item book="book"></book-item>
+			</div>
+		</div>
+	</div>
+</div>

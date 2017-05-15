@@ -1,47 +1,44 @@
-$bgDefault: #009999;
-$bgHighlight: #009999;
-$colDefault: #ecf0f1;
-$colHover: #d1ffed;
+@import 'color';
 
 .navbar-default {
-	background-color: $bgDefault;
-	border-color: $bgHighlight;
-	border-radius: 0px;
+	background-color: $backgroundMenuColor;
+	border-color: $backgroundMenuColor;
+	border-radius: 0em;
 
 	.navbar-brand {
-		color: $colDefault;
+		color: $menuLinkColor;
 
 		&:hover, &:focus {
-			color: $colHover;
+			color: $menuLinkColorHover;
 		}
 	}
 
 	.navbar-nav {    
 		> li {
 			> a {
-				color: $colDefault;
+				color: $menuLinkColor;
 
 				&:hover, &:focus {
-					color: $colHover;
+					color: $menuLinkColorHover;
 				}
 			}
 		}
 
 		.active {
 			> a, > a:hover, > a:focus {
-				color: $colHover;
-				background-color: $bgHighlight;
+				color: $menuLinkColorHover;
+				background-color: $backgroundMenuColor;
 			}
 		}
 
 		.open {
 			> a, > a:hover, > a:focus {
-				color: $colHover;
-				background-color: $bgHighlight;
+				color: $menuLinkColorHover;
+				background-color: $backgroundMenuColor;
 
 				.caret {
-					border-top-color: $colHover;
-					border-bottom-color: $colHover;
+					border-top-color: $menuLinkColorHover;
+					border-bottom-color: $menuLinkColorHover;
 				}
 			}
 		}
@@ -49,14 +46,14 @@ $colHover: #d1ffed;
 		> .dropdown {
 			> a {
 				.caret {
-					border-top-color: $colDefault;
-					border-bottom-color: $colDefault; 
+					border-top-color: $menuLinkColor;
+					border-bottom-color: $menuLinkColor;
 				}
 
 				&:hover, &:focus {
 					.caret {
-						border-top-color: $colHover;
-						border-bottom-color: $colHover; 
+						border-top-color: $menuLinkColorHover;
+						border-bottom-color: $menuLinkColorHover;
 					}
 				}
 			}
@@ -64,25 +61,25 @@ $colHover: #d1ffed;
 	}
 
 	.navbar-toggle {
-		border-color: $bgHighlight;
+		border-color: $backgroundMenuColor;
 
 		&:hover, &:focus {
-			background-color: $bgHighlight;
+			background-color: $backgroundMenuColor;
 		}
 
 		.icon-bar {
-			background-color: $colDefault;
+			background-color: $menuLinkColor;
 		}
 	}
 }
 
-@media (max-width: 767px) {
+@media (max-width: 48.000em) {
 	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
-		color: $colDefault;
+		color: $menuLinkColor;
 
 		&:hover, &:focus {
-			color: $colHover;
-			background-color: $bgHighlight;
+			color: $menuLinkColorHover;
+			background-color: $backgroundMenuColor;
 		}
 	}
 }

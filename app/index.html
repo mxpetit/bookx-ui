@@ -9,18 +9,31 @@
 		<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.min.css"/>
 		<link rel="stylesheet" type="text/css" href="css/app.min.css">
 
+		<!-- Get JQuery from CDN -->
+		<script
+			src="https://code.jquery.com/jquery-3.0.0.min.js"
+			integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="
+			crossorigin="anonymous">
+		</script>
+		<!-- Get JQuery from server if the CDN fails -->
+		<script>window.jQuery || document.write('<script src="lib/jquery/dist/jquery.min.js">\x3C/script>')</script>
+		<!-- Get Bootstrap JS from CDN -->
+		<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+			integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+			crossorigin="anonymous">
+		</script>
+		<!-- Get Bootstrap JS from server if the CDN fails -->
+		<script>if(typeof($.fn.modal) === 'undefined') {document.write('<script src="lib/bootstrap/dist/js/bootstrap.min.js"><\/script>')}</script>
 		<script src="lib/angular/angular.js"></script>
 		<script src="lib/angular-route/angular-route.min.js"></script>
 		<script src="lib/angular-translate/angular-translate.min.js"></script>
-		<script src="lib/jquery/dist/jquery.min.js"></script>
-		<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
-
 		<script src="javascript/app.min.js"></script>
 	</head>
 	<body>
 		<ng-include src="'./html/menu.html'"></ng-include>
-		<div class="container">
-			<ng-view></ng-view>
-		</div>		
+		<ng-view></ng-view>
+		<div class="clearfix"></div>
+		<ng-include src="'./html/footer.html'"></ng-include>
 	</body>
 </html>

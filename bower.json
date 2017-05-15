@@ -19,5 +19,8 @@
     "angular-translate": "^2.13.1",
     "bootstrap": "^3.3.7",
     "bootstrap-select": "^1.12.1"
+  },
+  "dependencies": {
+    "jquery": "3.0.0"
   }
 }

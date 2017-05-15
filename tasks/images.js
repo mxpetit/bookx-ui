@@ -4,11 +4,11 @@ var del = require('del'),
 
 module.exports = {
 	clean: function() {
-		return del('./dist/images/*');
+		return del('./dist/images/*.png');
 	},
 
 	build: function() {
-		return gulp.src('./assets/images/*')
+		return gulp.src('./assets/images/*.png')
 			.pipe(imagemin())
 			.pipe(gulp.dest('./dist/images'));
 	},

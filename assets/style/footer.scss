@@ -1,0 +1,17 @@
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+
+	.navbar-default {
+		height: 3.125em;
+		background-color: darkslategrey;
+		text-align: center;
+		padding: 0.938em 0 0.938em 0;
+
+		a {
+			padding: 0 1.563em 0 1.563em;
+			color: white;
+		}
+	}
+}

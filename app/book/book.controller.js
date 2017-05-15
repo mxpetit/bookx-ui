@@ -5,20 +5,21 @@
 		.module('book')
 		.controller('BookController', BookController);
 
-	BookController.$inject = ['$http', '$log'];
+	BookController.$inject = ['BookProvider'];
 
-	function BookController($http, $log) {
+	function BookController(BookProvider) {
 		var vm = this;
+
 		vm.books = [];
 		vm.error = false;
+		vm.errorMessage = undefined;
 
-		$http
-			.get('http://localhost:8080/book')
-			.then(function successCallback(response) {
-				vm.books = response.data;
-				$log.log(response.data);
-			}, function errorCallback(response) {
+		BookProvider.getAllBooks(6)
+			.then(function(response) {
+				vm.books = response.data.results;
+			}).catch(function(error) {
 				vm.error = true;
+				vm.errorMessage = error.data.message;
 			});
 	}
 })();
