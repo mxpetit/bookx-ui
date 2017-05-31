@@ -22,11 +22,14 @@
 				'OVERVIEW' : 'Aperçu',
 				'SEARCH': 'Recherche',
 				'SHARE' : 'Partager',
+				'SIGN_IN': 'Se connecter',
+				'SIGN_OUT': 'Se déconnecter',
 				'SUBMIT': 'Envoyer',
 				'TERMS_OF_USE': 'Conditions d\'utilisation',
 				'TITLE': 'Titre',
 				'TO_DISCOVER': 'À découvrir',
-				'TRENDING': 'Tendance'
+				'TRENDING': 'Tendance',
+				'WELCOME_BACK': 'Heureux de vous revoir'
 			})
 			.translations('en', {
 				'ALL': 'All',
@@ -41,14 +44,18 @@
 				'OVERVIEW' : 'Overview',
 				'SEARCH': 'Search',
 				'SHARE' : 'Share',
+				'SIGN_IN': 'Sign in',
+				'SIGN_OUT': 'Sign out',
 				'SUBMIT': 'Submit',
 				'TERMS_OF_USE': 'Terms of use',
 				'TITLE': 'Title',
 				'TO_DISCOVER': 'To discover',
-				'TRENDING': 'Trending'
+				'TRENDING': 'Trending',
+				'WELCOME_BACK': 'Welcome back'
 			});
 
-		$translateProvider.preferredLanguage('fr');
+		$translateProvider.determinePreferredLanguage();
+		$translateProvider.fallbackLanguage('fr');
 		$translateProvider.useSanitizeValueStrategy('escape');
 	}
 })();

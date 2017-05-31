@@ -1,27 +1,22 @@
-<ul class="nav navbar-nav navbar-right">
-	<li>
-		<a ng-href="/#!/authentification">{{'CONNECT' | translate | uppercase}}</a>
+<ul class="nav navbar-nav navbar-right" ng-controller="MenuController as vm">
+	<li ng-show="!vm.signedin">
+		<a ng-click="vm.signIn()">{{'SIGN_IN' | translate | uppercase}}</a>
 	</li>
-	<li class="dropdown">
-		<a href="" class="dropdown-toggle" data-toggle="dropdown">
-			{{'TRENDING' | translate | uppercase}} <b class="caret"></b>
-		</a>
-		<ul class="dropdown-menu">
-			<li><a href="/#!/xxx">XXX</a></li>
-			<li><a href="/#!/yyy">YYY</a></li>
-			<li><a href="/#!/zzz">ZZZ</a></li>
-		</ul>
+	<li ng-hide="!vm.signedin">
+		<a>{{'WELCOME_BACK' | translate}} {{vm.givenName}}</a>
 	</li>
-	<li>
-		<a href="/#!/collections">{{'COLLECTIONS' | translate | uppercase}}</a>
+	<li ng-hide="!vm.signedin">
+		<a ng-click="vm.signOut()">{{'SIGN_OUT' | translate | uppercase}}</a>
 	</li>
 	<li class="dropdown">
 		<a href="" class="dropdown-toggle" data-toggle="dropdown">
 			{{'LANGUAGES' | translate | uppercase}} <b class="caret"></b>
 		</a>
-		<ul class="dropdown-menu" ng-controller="MenuController as menuCtrl">
-			<li ng-repeat="language in menuCtrl.availableLanguages">
-				<a href="" ng-click="menuCtrl.translate(language)">{{language | uppercase}}</a>
+		<ul class="dropdown-menu">
+			<li ng-repeat="language in vm.availableLanguages">
+				<a href="" ng-click="vm.translate(language)">
+					{{language | uppercase}}
+				</a>
 			</li>
 		</ul>
 	</li>

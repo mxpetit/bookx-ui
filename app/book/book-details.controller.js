@@ -2,7 +2,9 @@
 	'use strict';
 
 	angular
-		.module('book', [])
+		.module('book', [
+			'ngRoute'
+		])
 		.controller('BookDetailsController', BookDetailsController);
 
 	BookDetailsController.$inject = ['BookProvider', '$routeParams'];

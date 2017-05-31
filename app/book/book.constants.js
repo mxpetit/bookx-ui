@@ -3,5 +3,5 @@
 
 	angular
 		.module('book')
-		.constant('BOOK_ENDPOINT', 'http://localhost:8080/book');
+		.constant('BOOK_ENDPOINT', 'http://api.book.xyz/book');
 })();

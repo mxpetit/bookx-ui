@@ -2,8 +2,9 @@
 	'use strict';
 
 	angular
-		.module('home', [
-			'book'
+		.module('shelve', [
+			'authentication',
+			'ngRoute'
 		])
 		.config(configure);
 
@@ -11,10 +12,9 @@
 
 	function configure($routeProvider) {
 		$routeProvider
-			.when('/', {
-				templateUrl: 'html/home.html',
-				controller: 'HomeController',
-				controllerAs: 'vm'
+			.when('/shelve', {
+				template: '<h1>Shelve</h1>',
+				requireAuth: true
 			});
 	}
 })();

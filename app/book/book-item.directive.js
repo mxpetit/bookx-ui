@@ -14,7 +14,7 @@
 				book: '='
 			},
 			replace: true,
-			templateUrl: '../html/book-item.html'
+			templateUrl: 'html/book-item.html'
 		}
 
 		return directive;

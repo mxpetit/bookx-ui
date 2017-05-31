@@ -13,10 +13,11 @@
 		}
 	}
 
-	.navbar-nav {    
+	.navbar-nav {
 		> li {
 			> a {
 				color: $menuLinkColor;
+				cursor: pointer;
 
 				&:hover, &:focus {
 					color: $menuLinkColorHover;
